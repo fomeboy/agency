@@ -1,5 +1,5 @@
 # agency
-Dependency based asynchronous flow control utility for [node](http://nodejs.org).
+Dependency based asynchronous flow control utility for [Node.js](http://nodejs.org).
 
 
 never wait
