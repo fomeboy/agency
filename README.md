@@ -1,6 +1,8 @@
 # agency
 Dependency based asynchronous flow control utility for [Node.js](http://nodejs.org).
 
+[![NPM Version][npm-image]][npm-url]
+
 ### Philosophy
 
 " never wait, never block, finish fast "
