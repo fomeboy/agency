@@ -16,7 +16,7 @@ $ npm install agency
 #### Usage case #1
 Simple agency and agent creation and execution
 
-```bash
+```js
 var ag = require('agency');
 
 // creates new agency and sets logging to verbose mode
