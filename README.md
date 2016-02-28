@@ -31,3 +31,27 @@ agent.setFunction(function() {console.log('agent id1 executed!');});
 // run agents
 agency.runAgents();
 ```
+
+### Usage case #2
+agency with dependency execution
+
+```js
+var ag = require('agency');
+
+var agency = ag('v');
+
+// agent 'id3' will be executed after 'id1' and 'id2'
+var agent3 = agency.createAgent('id3', 'id1&&id2');
+agent3.setFunction(function () { console.log('agent id3 executed!'); });
+
+// defines agent 'id1'
+var agent = agency.createAgent('id1');
+agent.setFunction(function () { console.log('agent id1 executed!'); });
+
+// defines agent 'id2'
+var agent2 = agency.createAgent('id2');
+agent2.setFunction(function () { console.log('agent id2 executed!'); });
+
+// run agents
+agency.runAgents();
+```
