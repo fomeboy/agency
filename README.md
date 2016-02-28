@@ -12,3 +12,5 @@ Respecting the nature of Node.js, *agency* encourages the use of independent, no
 ```bash
 $ npm install agency
 ```
+
+### Usage case #1
