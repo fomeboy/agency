@@ -55,3 +55,6 @@ agent2.setFunction(function () { console.log('agent id2 executed!'); });
 // run agents
 agency.runAgents();
 ```
+
+#### Usage case #3
+*cascading agency with premature execution halting*
