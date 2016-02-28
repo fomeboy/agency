@@ -32,7 +32,7 @@ agent.setFunction(function() {console.log('agent id1 executed!');});
 agency.runAgents();
 ```
 
-### Usage case #2
+#### Usage case #2
 agency with dependency execution
 
 ```js
