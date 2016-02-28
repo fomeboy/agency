@@ -14,3 +14,4 @@ $ npm install agency
 ```
 
 #### Usage case #1
+Simple agency agency and agent creation and execution
