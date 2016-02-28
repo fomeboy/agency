@@ -19,7 +19,7 @@ Simple agency and agent creation and execution
 ```js
 var ag = require('agency');
 
-// creates new agency and sets logging to verbose mode
+// creates new agency and sets logging to verbose mode (output to console)
 var agency = ag('v');
 
 // creates new agent 'id1'
