@@ -14,7 +14,7 @@ $ npm install agency
 ```
 
 #### Usage case #1
-Simple agency and agent creation and execution
+agency set up and single agent creation and execution
 
 ```js
 var ag = require('agency');
