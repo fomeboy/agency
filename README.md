@@ -9,4 +9,6 @@ Respecting the nature of Node.js, *agency* encourages the use of independent, no
 
 ### Installation
 
-$ npm install express
+```bash
+$ npm install agency
+```
