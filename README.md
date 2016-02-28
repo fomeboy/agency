@@ -13,4 +13,4 @@ Respecting the nature of Node.js, *agency* encourages the use of independent, no
 $ npm install agency
 ```
 
-### Usage case #1
+#### Usage case #1
