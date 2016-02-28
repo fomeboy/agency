@@ -33,7 +33,7 @@ agency.runAgents();
 ```
 
 #### Usage case #2
-agency with dependency execution
+*agency with dependency execution*
 
 ```js
 var ag = require('agency');
