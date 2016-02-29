@@ -175,6 +175,7 @@ written, a default log file with format timestamp.log will be created in the pro
   function receives an object o that allows the agent to get the result of any of its dependency agents (see usage case #4)*
   
 - setFunction (function () { // your code here })
+
   *optional call if there is no need for inter agent communication; code to execute is simply wrapped in a function*
 
 - setCallback (function (err, data) {})
