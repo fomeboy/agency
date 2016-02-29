@@ -137,3 +137,7 @@ agency.runAgents();
 ### API
 
 #### agency
+
+- createAgent(id, expr)
+- runAgents()
+- setLogFile
