@@ -138,7 +138,10 @@ agency.runAgents();
 
 #### agency(mode)
 
-*main object constructor received the log mode as optional parameter*
+*object constructor, receives the log mode as optional parameter; 'q' represents quiet mode and doesn't report
+any activity; 'v' means verbose and outputs the creation and execution events to the console; 'l' is the log mode and
+writes the events into the defined directory/file in JSON format; if the log directory/file is not defined, or cannot be 
+written, a default log file with the format timestamp.log will be created in the project directory*
 
 - createAgent(id, expr)
 
