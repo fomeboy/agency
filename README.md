@@ -94,7 +94,7 @@ agency.runAgents();
 ```
 
 #### Usage case #4
-inter agent communicatio
+inter agent communication
 
 ```js
 var ag = require('agency');
