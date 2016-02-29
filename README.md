@@ -62,7 +62,8 @@ agency.runAgents();
 ```js
 var ag = require('agency');
 
-// log will be written to specified file, otherwise will write on project directory to [timestamp].log
+// log will be written to specified file;
+// on error log will be written on default file [timestamp].log
 var agency = ag('l');
 agency.setLogFile('UsageCase#3.log');
 
