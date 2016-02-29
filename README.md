@@ -155,9 +155,18 @@ written, a default log file with the format timestamp.log will be created in the
   *method that controls the execution of the agents, based on their current status and dependencies list;
   when all agents are executed reports the results; should be the last method called*
   
-- setLogFile
+- setLogFile(fileName)
  
   *sets the directory/file name of the log file*
  
 #### agent
 
+*created at agency level by the method createAgent(id, expr)* 
+
+- setFunction() 
+
+- setCallback()
+
+- setHaltExecution(flag)
+
+- setDifDepCheck(flag)
