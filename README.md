@@ -133,3 +133,7 @@ agent2.setCallback(function (err, data) { console.log('id2 callback executed: ' 
 // run agents
 agency.runAgents();
 ```
+
+### API
+
+#### agency
