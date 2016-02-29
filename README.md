@@ -140,6 +140,13 @@ agent2.setCallback(function (err, data) {
 agency.runAgents();
 ```
 
+#### Usage case #5
+deferred dependency checking
+
+```js
+
+```
+
 ### API
 
 #### agency (mode)
