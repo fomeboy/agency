@@ -92,3 +92,41 @@ agent4.setFunction(function () { console.log('agent id4 executed!'); });
 // run agents
 agency.runAgents();
 ```
+
+#### Usage case #4
+inter agent communicatio
+
+```js
+var ag = require('agency');
+
+var agency = ag('v');
+
+// defines agent 'id1'
+var agent = agency.createAgent('id1');
+
+agent.setFunction(function () {
+    console.log('agent id1 executed!');
+    return 10;
+});
+
+// agent 'id2' will be executed after 'id1'
+var agent2 = agency.createAgent('id2', 'id1');
+
+// agent 'id2' executes conditionally according to 'id1' result 
+agent2.setFunction(function (inter) {
+    var depResult = inter.getValueOfAgent('id1');
+    var res;
+    
+    if (depResult instanceof Error) {
+        // do stuff
+    } else {
+        res = 10 + depResult;
+        console.log(res);
+        return res;
+    }
+ 
+});
+
+// run agents
+agency.runAgents();
+```
