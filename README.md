@@ -62,9 +62,10 @@ agency.runAgents();
 ```js
 var ag = require('agency');
 
+var agency = ag('l');
+
 // log will be written to specified file;
 // on error log will be written on default file [timestamp].log
-var agency = ag('l');
 agency.setLogFile('UsageCase#3.log');
 
 // defines agent 'id1'
