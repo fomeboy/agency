@@ -145,8 +145,8 @@ written, a default log file with the format timestamp.log will be created in the
 
 - createAgent(id, expr)
 
-  *method used to create a new execution unit; the first parameter id is required and can contain alpha-
-  numeric charaters and the underscore; the second parameter is an optional logical expression defining
+  *method used to create a new execution unit; the first parameter id is required and can contain alphanumeric 
+  charaters and the underscore; the second parameter is an optional logical expression defining
   the execution dependencies of the agent; all logical expressions containing the symbols '&&', '||', '!',
   '(', ')' are accepted*
   
