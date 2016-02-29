@@ -180,7 +180,8 @@ written, a default log file with format timestamp.log will be created in the pro
 - setCallback (function (err, data) {})
 
   *defines an optional callback function; if the agent defines a callback function it will receive an error object if 
-  the agent function execution fails or the value returned by the agent function (see usage case #4)*
+  the agent function execution fails or the value returned by the agent function - only one of the parameters will be
+  sent (see usage case #4)*
   
 - setCallback (function () { // your code here })
 
