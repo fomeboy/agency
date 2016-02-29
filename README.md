@@ -221,9 +221,9 @@ written, a default log file with format timestamp.log will be created in the pro
 - setDeffDepCheck (flag)
 
   *setting this flag to true (false by default) will cause the agency to look not only for the executed state of
-  each agent but also its waiting for execution state; decomposing usage case #5 steps:
-    - flag is set to false 
-        - the agency will create agent 'id1' [call stack]
-        - the agency will create agent 'id2' [call stack]
+  each agent but also its waiting for execution state; decomposing usage case #5 steps:*
+    - *flag is set to false* 
+        - *the agency will create agent 'id1' [call stack]*
+        - *the agency will create agent 'id2' [call stack]*
   
-  *
+  
