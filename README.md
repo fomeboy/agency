@@ -127,7 +127,7 @@ agent2.setFunction(function (inter) {
  
 });
 
-// defines a callback for agent 'id2'
+// defines a callback for agent 'id2' using the standard contract
 agent2.setCallback(function (err, data) { console.log('id2 callback executed: ' + data); });
 
 // run agents
