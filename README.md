@@ -127,6 +127,9 @@ agent2.setFunction(function (inter) {
  
 });
 
+// defines a callback for agent 'id2'
+agent2.setCallback(function (err, data) { console.log('id2 callback executed: ' + data); });
+
 // run agents
 agency.runAgents();
 ```
