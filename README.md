@@ -190,4 +190,7 @@ written, a default log file with format timestamp.log will be created in the pro
   
 - setHaltExecution (flag)
 
+  *setting this flag to true will cause the interruption of the agency execution if the agent's execution fails (see
+  usage case #3)*
+
 - setDifDepCheck (flag)
