@@ -1,8 +1,6 @@
 # agency
 Dependency based asynchronous flow control utility for [Node.js](http://nodejs.org).
 
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
 
 ## Philosophy
 
@@ -247,8 +245,3 @@ written, a default log file with format timestamp.log will be created in the pro
 ## License
 
   [MIT](LICENSE)
-
-[npm-image]: https://img.shields.io/npm/v/agency.svg
-[npm-url]: https://npmjs.org/package/agency
-[downloads-image]: https://img.shields.io/npm/dm/agency.svg
-[downloads-url]: https://npmjs.org/package/agency
