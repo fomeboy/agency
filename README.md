@@ -157,5 +157,7 @@ written, a default log file with the format timestamp.log will be created in the
   
 - setLogFile
  
+  *sets the directory/file name of the log file*
+ 
 #### agent
 
