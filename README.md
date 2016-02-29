@@ -182,7 +182,7 @@ written, a default log file with format timestamp.log will be created in the pro
 
   *defines an optional callback function; if the agent defines a callback function it will receive an error object if 
   the agent function execution fails or the value returned by the agent function - only one of the parameters will be
-  sent; executed after the agent's function has completed (see usage case #4)*
+  sent; executed after the agent function has completed (see usage case #4)*
   
 - setCallback (function () { // your code here })
 
@@ -190,7 +190,7 @@ written, a default log file with format timestamp.log will be created in the pro
   
 - setHaltExecution (flag)
 
-  *setting this flag to true will cause the interruption of the agency execution if the agent's execution fails (see
+  *setting this flag to true will cause the interruption of the agency execution if the agent execution fails (see
   usage case #3)*
 
 - setDifDepCheck (flag)
