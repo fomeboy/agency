@@ -139,7 +139,8 @@ agency.runAgents();
 #### agency
 
 - createAgent(id, expr)
-Function that create s a necessary thing
+
+*Function that create s a necessary thing*
 - runAgents()
 - setLogFile
  
