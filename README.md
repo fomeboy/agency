@@ -62,7 +62,7 @@ agency.runAgents();
 ```js
 var ag = require('agency');
 
-// log is written to specified directory/file, otherwise to the project directory to [timestamp].log
+// log will be written to specified file, otherwise will write on project directory to [timestamp].log
 var agency = ag('l');
 agency.setLogFile('UsageCase#3.log');
 
@@ -76,14 +76,14 @@ agent2.setFunction(function () { console.log('agent id2 executed!'); });
 
 // agent 'id3' will be executed after 'id2'
 var agent3 = agency.createAgent('id3', 'id2');
-agent3.setFunction(function () { 
+agent3.setFunction(function () {
     var err = new Error('agent 3 error');
-    console.log('agent id3 executed!')
+    console.log('agent id3 executed!');
     throw err;
 });
 agent3.setHaltExecution(true);
 
-// agent 'id4' will not run because 'id3' error stops the agency execution
+// agent 'id4' will not run because 'id3' error stopped the agency execution
 var agent4 = agency.createAgent('id4', 'id3');
 agent4.setFunction(function () { console.log('agent id4 executed!'); });
 
