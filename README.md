@@ -140,11 +140,16 @@ agency.runAgents();
 
 - createAgent(id, expr)
 
-  *method used to create a new execution unit; the first parameter id is required and can contain alpha
+  *method used to create a new execution unit; the first parameter id is required and can contain alpha-
   numeric charaters and the underscore; the second parameter is an optional logical expression defining
   the execution dependencies of the agent; all logical expressions containing the symbols '&&', '||', '!',
   '(', ')' are accepted*
+  
 - runAgents()
+
+  *method that controls the execution of the agents, based on their current status and dependencies list;
+  when all agents are executed reports the results; should be the last method called*
+  
 - setLogFile
  
 #### agent
