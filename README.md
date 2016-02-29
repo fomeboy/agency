@@ -169,18 +169,23 @@ written, a default log file with format timestamp.log will be created in the pro
 
 *created at agency level by the method createAgent(id, expr)* 
 
-- setFunction(function (o) { var agRes = o.getValueOfAgent('id'); }) 
+- setFunction (function (o) { var agRes = o.getValueOfAgent('id'); }) 
 
   *sets the code to be executed by the agent wrapped in a function; by default, the first parameter of the defined
-  function receives an object o that allows the agent to get the result of any of its dependency agents; if a callback
-  function is defined the agent it will receive an error object if the agent function execution fails or the value
-  returned by the agent function (see usage case #4)*
+  function receives an object o that allows the agent to get the result of any of its dependency agents (see usage case #4)*
   
-- setFunction(function () {})
+- setFunction (function () {})
   *optional call if there is no need for inter agent communication; code to run is simply wrapped in a function*
 
-- setCallback()
+- setCallback (function (err, data) {})
 
+  *defines an optional callback function; if the agent defines a callback function it will receive an error object if 
+  the agent function execution fails or the value returned by the agent function (see usage case #4)*
+  
+- setCallback (function () {})
+
+  *optional definition of callback if the execution result of the function is not needed*
+  
 - setHaltExecution(flag)
 
 - setDifDepCheck(flag)
