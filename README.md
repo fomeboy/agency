@@ -57,4 +57,4 @@ agency.runAgents();
 ```
 
 #### Usage case #3
-*cascading agency with premature execution halting*
+*cascading agency with execution interruption*
