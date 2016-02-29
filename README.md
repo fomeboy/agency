@@ -136,7 +136,9 @@ agency.runAgents();
 
 ### API
 
-#### agency
+#### agency(mode)
+
+*main object constructor received the log mode as optional parameter*
 
 - createAgent(id, expr)
 
