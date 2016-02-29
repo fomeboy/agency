@@ -221,7 +221,8 @@ written, a default log file with format timestamp.log will be created in the pro
 - setDeffDepCheck (flag)
 
   *setting this flag to true (false by default) will cause the agency to look not only for the executed state of
-  each agent but also its waiting for execution state; decomposing usage case #5 steps:*
+  each agent but also its waiting for execution state; executed state is set to true only when the agent has
+  actually executed whereas the waiting for execution is set at creation time; decomposing usage case #5 steps:*
     - *flag is set to false* 
         - *the agency will create agent 'id1' [call stack]*
         - *the agency will create agent 'id2' [call stack]*
@@ -235,7 +236,7 @@ written, a default log file with format timestamp.log will be created in the pro
         - *the agency will create agent 'id2' [call stack]*
         - *agency.runAgents() is called*
         - *agent 'id1' has not executed yet so it is queued for execution [placed on event loop]*
-        - *agent 'id2' id dependent on 'id1' and checks for its execution state, but also for its waiting
+        - *agent 'id2' id dependent on 'id1' and checks for its execution state (false), but also for its waiting
            for execution state; since it is true it will not queue it for execution*
         - *agent 'id1' is moved from the event loop to the call stack and executes*
   
