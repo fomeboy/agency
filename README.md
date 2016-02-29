@@ -163,7 +163,12 @@ written, a default log file with format timestamp.log will be created in the pro
 
 *created at agency level by the method createAgent(id, expr)* 
 
-- setFunction() 
+- setFunction(f) 
+
+  *sets the code to be executed by the agent wrapped in a function f; by default, the first parameter of the defined
+  function f receives an object that allows the agent to get the result of any of its dependency agents; if a callback
+  function is defined the agent it will receive an error object if the agent function execution fails or the value
+  returned by the agent function (see usage case #4)*
 
 - setCallback()
 
