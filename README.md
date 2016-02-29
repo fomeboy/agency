@@ -58,3 +58,35 @@ agency.runAgents();
 
 #### Usage case #3
 *cascading agency with execution interruption*
+
+```js
+var ag = require('agency');
+
+// log will be written to specified file, otherwise will write on project directory to [timestamp].log
+var agency = ag('l');
+agency.setLogFile('UsageCase#3.log');
+
+// defines agent 'id1'
+var agent = agency.createAgent('id1');
+agent.setFunction(function () { console.log('agent id1 executed!'); });
+
+// agent 'id2' will be executed after 'id1'
+var agent2 = agency.createAgent('id2', 'id1');
+agent2.setFunction(function () { console.log('agent id2 executed!'); });
+
+// agent 'id3' will be executed after 'id2'
+var agent3 = agency.createAgent('id3', 'id2');
+agent3.setFunction(function () { 
+    var err = new Error('agent 3 error');
+    console.log('agent id3 executed!')
+    throw err;
+});
+agent3.setHaltExecution(true);
+
+// agent 'id4' will not run because 'id3' error stopped the agency execution
+var agent4 = agency.createAgent('id4', 'id3');
+agent4.setFunction(function () { console.log('agent id4 executed!'); });
+
+// run agents
+agency.runAgents();
+```
