@@ -144,7 +144,25 @@ agency.runAgents();
 deferred dependency checking
 
 ```js
+var ag = require('agency');
 
+var agency = ag('q');
+
+var agent1 = agency.createAgent('id1');
+agent1.setFunction(function () { console.log('agent id1 executed'); });
+agent1.setCallback(function () { console.log('agent id1 callback has executed!'); });
+
+// runs only if agent id1 has not executed yet
+var agent2 = agency.createAgent('id2', '!id1');
+agent2.setFunction(function () { console.log('agent id2 executed!'); });
+agent2.setCallback(function () { console.log('agent id2 callback has executed!'); });
+
+// test with true or false values to observe different agency execution
+// see API setDeffDepCheck section for explanation of flag
+agent2.setDifDepCheck(true);
+
+// run agents
+agency.runAgents();
 ```
 
 ### API
@@ -161,7 +179,7 @@ written, a default log file with format timestamp.log will be created in the pro
   *method used to create a new execution unit; the first parameter id is required and can contain alphanumeric 
   charaters and the underscore; the second parameter is an optional logical expression defining
   the execution dependencies of the agent; all logical expressions containing the symbols '&&', '||', '!',
-  '(', ')' are accepted*
+  '(', ')' are accepted; if no dependecies are defined, agents are executed by creation order*
   
 - runAgents ()
 
@@ -197,7 +215,11 @@ written, a default log file with format timestamp.log will be created in the pro
   
 - setHaltExecution (flag)
 
-  *setting this flag to true will cause the interruption of the agency execution if the agent execution fails (see
-  usage case #3)*
+  *setting this flag to true (false by default) will cause the interruption of the agency execution if the agent 
+  execution fails (see usage case #3)*
 
-- setDifDepCheck (flag)
+- setDeffDepCheck (flag)
+
+  *setting this flag to true (false by default) will cause the agency to look not only for the executed state of
+  each agent but also its waiting for execution state; looking at usage case #5 if the flag is false the agency will
+  create agents 'id1' and 'id2' *
