@@ -142,26 +142,26 @@ agency.runAgents();
 
 ### API
 
-#### agency(mode)
+#### agency (mode)
 
 *object constructor, receives the log mode as optional parameter; 'q' represents quiet mode and doesn't report
 any activity; 'v' means verbose and outputs the creation and execution events to the console; 'l' stands for log mode and
 writes the events into the defined directory/file in JSON format; if the log directory/file is not defined, or cannot be 
 written, a default log file with format timestamp.log will be created in the project directory*
 
-- createAgent(id, expr)
+- createAgent (id, expr)
 
   *method used to create a new execution unit; the first parameter id is required and can contain alphanumeric 
   charaters and the underscore; the second parameter is an optional logical expression defining
   the execution dependencies of the agent; all logical expressions containing the symbols '&&', '||', '!',
   '(', ')' are accepted*
   
-- runAgents()
+- runAgents ()
 
   *method that controls the execution of the agents, based on their current status and dependencies list;
   when all agents are executed reports the results; should be the last method called*
   
-- setLogFile(fileName)
+- setLogFile (fileName)
  
   *sets the directory/file name of the log file*
  
@@ -174,18 +174,18 @@ written, a default log file with format timestamp.log will be created in the pro
   *sets the code to be executed by the agent wrapped in a function; by default, the first parameter of the defined
   function receives an object o that allows the agent to get the result of any of its dependency agents (see usage case #4)*
   
-- setFunction (function () {})
-  *optional call if there is no need for inter agent communication; code to run is simply wrapped in a function*
+- setFunction (function () { // your code here })
+  *optional call if there is no need for inter agent communication; code to execute is simply wrapped in a function*
 
 - setCallback (function (err, data) {})
 
   *defines an optional callback function; if the agent defines a callback function it will receive an error object if 
   the agent function execution fails or the value returned by the agent function (see usage case #4)*
   
-- setCallback (function () {})
+- setCallback (function () { // your code here })
 
   *optional definition of callback if the execution result of the function is not needed*
   
-- setHaltExecution(flag)
+- setHaltExecution (flag)
 
-- setDifDepCheck(flag)
+- setDifDepCheck (flag)
