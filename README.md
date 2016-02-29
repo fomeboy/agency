@@ -118,7 +118,7 @@ agent2.setFunction(function (inter) {
     var res;
     
     if (depResult instanceof Error) {
-        // do stuff
+        return depResult;
     } else {
         res = 10 + depResult;
         console.log(res);
@@ -128,7 +128,13 @@ agent2.setFunction(function (inter) {
 });
 
 // defines a callback for agent 'id2' using the standard contract
-agent2.setCallback(function (err, data) { console.log('id2 callback executed: ' + data); });
+agent2.setCallback(function (err, data) { 
+    if (err) {
+        console.log(err.message);
+    } else {
+        console.log('id2 callback executed: ' + data); 
+    }
+});
 
 // run agents
 agency.runAgents();
