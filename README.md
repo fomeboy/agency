@@ -4,19 +4,19 @@ Dependency based asynchronous flow control utility for [Node.js](http://nodejs.o
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 
-### Philosophy
+## Philosophy
 
 " never wait, never block, finish fast "
 
 Respecting the nature of Node.js, *agency* encourages the use of independent, non blocking, fast running units of execution called agents. *agency* controls the execution flow of agents by looking at their dependency list defined by a logical expression. Inter agent communication allows greater arquitecture flexibility and additional conditional execution.
 
-### Installation
+## Installation
 
 ```bash
 $ npm install agency
 ```
 
-#### Usage case #1
+### Usage case #1
 *agency set up and single agent creation and execution*
 
 ```js
@@ -35,7 +35,7 @@ agent.setFunction(function() {console.log('agent id1 executed!');});
 agency.runAgents();
 ```
 
-#### Usage case #2
+### Usage case #2
 *agency with dependency execution*
 
 ```js
@@ -59,7 +59,7 @@ agent2.setFunction(function () { console.log('agent id2 executed!'); });
 agency.runAgents();
 ```
 
-#### Usage case #3
+### Usage case #3
 *cascading agency with execution interruption*
 
 ```js
@@ -96,7 +96,7 @@ agent4.setFunction(function () { console.log('agent id4 executed!'); });
 agency.runAgents();
 ```
 
-#### Usage case #4
+### Usage case #4
 inter agent communication
 
 ```js
@@ -143,7 +143,7 @@ agent2.setCallback(function (err, data) {
 agency.runAgents();
 ```
 
-#### Usage case #5
+### Usage case #5
 deferred dependency checking
 
 ```js
@@ -168,9 +168,9 @@ agent2.setDifDepCheck(true);
 agency.runAgents();
 ```
 
-### API
+## API
 
-#### agency (mode)
+### agency (mode)
 
 *object constructor, receives the log mode as optional parameter; 'q' represents quiet mode and doesn't report
 any activity; 'v' means verbose and outputs the creation and execution events to the console; 'l' stands for log mode and
@@ -193,7 +193,7 @@ written, a default log file with format timestamp.log will be created in the pro
  
   *sets the directory/file name of the log file*
  
-#### agent
+### agent
 
 *created at agency level by the method createAgent(id, expr)* 
 
