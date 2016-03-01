@@ -251,5 +251,7 @@ written, a default log file with format timestamp.log will be created in the pro
 
 [npm-image]: https://img.shields.io/npm/v/express.svg
 [npm-url]: https://npmjs.org/package/agency
+[downloads-image]: https://img.shields.io/npm/dm/express.svg
+[downloads-url]: https://npmjs.org/package/agency
 
   [MIT](LICENSE)
