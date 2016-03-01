@@ -1,6 +1,7 @@
+[![Agency Logo](https://drive.google.com/file/d/0B87h1sSd9y8ab3NWc2lFVXp0bEU/view?usp=sharing)]
+
 # agency
 Dependency based asynchronous flow control utility for [Node.js](http://nodejs.org).
-
 
 ## Philosophy
 
