@@ -1,4 +1,4 @@
-[![Agency Logo](https://drive.google.com/open?id=0B87h1sSd9y8ab3NWc2lFVXp0bEU)]
+[![Agency Logo](https://cldup.com/bz8tzDFRCz.png)]
 
 # agency
 Dependency based asynchronous flow control utility for [Node.js](http://nodejs.org).
