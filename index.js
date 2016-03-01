@@ -11,7 +11,7 @@
 * --------------------------------------------------------
 *
 * author:  Fernando Pires
-* version: 0.0.1 
+* version: 1.0.0
 */
 
 /*jshint newcap: false*/
