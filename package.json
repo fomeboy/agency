@@ -1,0 +1,16 @@
+{
+  "name": "agency",
+  "version": "0.0.1",
+  "description": "Dependency based asynchronous flow control utility",
+  "main": "index.js",
+  "keywords": [
+    "asynchronous",
+    "flow",
+    "control",
+    "execution",
+    "dependency"  
+  ],
+  "bugs": {"email": "fomeboy@yahoo.com"},
+  "author": "Fernando Pires <fomeboy@yahoo.com>",
+  "license": "MIT"
+}
