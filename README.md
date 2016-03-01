@@ -14,7 +14,7 @@ Respecting the nature of Node.js, *agency* encourages the use of independent, no
 $ npm install agency
 ```
 
-### Usage case #1
+#### Usage case #1
 *agency set up and single agent creation and execution*
 
 ```js
@@ -33,7 +33,7 @@ agent.setFunction(function() {console.log('agent id1 executed!');});
 agency.runAgents();
 ```
 
-### Usage case #2
+#### Usage case #2
 *agency with dependency execution*
 
 ```js
@@ -57,7 +57,7 @@ agent2.setFunction(function () { console.log('agent id2 executed!'); });
 agency.runAgents();
 ```
 
-### Usage case #3
+#### Usage case #3
 *cascading agency with execution interruption*
 
 ```js
@@ -94,7 +94,7 @@ agent4.setFunction(function () { console.log('agent id4 executed!'); });
 agency.runAgents();
 ```
 
-### Usage case #4
+#### Usage case #4
 inter agent communication
 
 ```js
@@ -141,7 +141,7 @@ agent2.setCallback(function (err, data) {
 agency.runAgents();
 ```
 
-### Usage case #5
+#### Usage case #5
 deferred dependency checking
 
 ```js
