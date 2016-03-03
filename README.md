@@ -234,7 +234,7 @@ written, a default log file with format timestamp.log will be created in the pro
         - *the agency will create agent 'id2' [call stack]*
         - *agency.runAgents() is called*
         - *agent 'id1' has not executed yet so it is queued for execution [placed on event loop]*
-        - *agent 'id2' id dependent on 'id1' but since 'id1' has not executed yet it is also queued [event loop]*
+        - *agent 'id2' is dependent on 'id1' but since 'id1' has not executed yet it is also queued [event loop]*
         - *agent 'id1' is moved from the event loop to the call stack and executes*
         - *agent 'id2' is moved from the event loop to the call stack and executes*
     - *flag is set to true* 
@@ -242,7 +242,7 @@ written, a default log file with format timestamp.log will be created in the pro
         - *the agency will create agent 'id2' [call stack]*
         - *agency.runAgents() is called*
         - *agent 'id1' has not executed yet so it is queued for execution [placed on event loop]*
-        - *agent 'id2' id dependent on 'id1' and checks for its execution state (false), but also for its waiting
+        - *agent 'id2' is dependent on 'id1' and checks for its execution state (false), but also for its waiting
            for execution state; since it is true it will not queue it for execution*
         - *agent 'id1' is moved from the event loop to the call stack and executes*
   
