@@ -39,7 +39,7 @@ function agency() {
   } else {
     args = Array.prototype.slice.call(arguments);
   }
-		
+
   if (args[0] !== undefined) {
     if (modes.indexOf(args[0]) !== -1) {
       mode = args[0];
@@ -51,11 +51,11 @@ function agency() {
   }
 
   jn.setLogMode(mode);
-  
+ 
   // returns a boolean value for each dependency of the current agent indicating
   // if is was already executed or is queued for execution (see difDepCheck flag)
   function hasAgentExecuted(agentsList, dependency, currAgent) {
-    var ret; 
+    var ret;
 
     for (var i = 0; i < agentsList.length; i++) {
       if (agentsList[i].getId() === dependency) {
@@ -67,7 +67,7 @@ function agency() {
         }
       }
     }
-    
+
     err.error = 'InvalidDependency';
     err.message = 'execution failed (invalid dependency agent: ' + dependency + ')';
     return err;

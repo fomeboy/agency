@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Dependency based asynchronous flow control utility",
   "main": "index.js",
   "keywords": [
